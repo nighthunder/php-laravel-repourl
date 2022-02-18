@@ -1,0 +1,105 @@
+
+input{
+    border-radius: 3px;
+    transition: 0.5s;
+    border: 1px solid gray;
+    padding: 5px;
+    margin: 5px;
+    width: 205px;
+    font-style: italic;
+    letter-spacing: 0.02em;
+}
+
+label{
+    font-size: 1.1em;
+}
+
+button{
+    padding: 5px;
+    width: 280px;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    background: #073e2e;
+    border-radius: 3px;
+    margin: 25px 0px;
+    color: #e6c1c1;
+}
+
+table{
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
+
+thead{
+    color: rgb(255, 255, 255);
+
+}
+
+td{
+    color: #000;
+    letter-spacing: 0.05em;
+    font-size: 1.1em;
+}
+
+th{
+    font-size: 1.1em;
+}
+
+table, tr, td, th{
+    text-align: center;
+    border: 1px solid #3b424f;
+}
+
+#myTable_info,
+#myTable_next,
+#myTable_previous,
+label, 
+.dataTables_wrapper .dataTables_length select,
+input[type="search"]{
+    color: #a0aec0;
+}
+
+#myTable_length, #myTable_filter{
+    margin-bottom: 15px;
+}
+
+button:hover{
+    opacity: 0.75;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.box{
+    border: 1px double #2d2c2c;
+    padding: 10px 30px 30px 30px;
+    border-radius: 10px;
+    box-shadow: 1px 2px 2px yellow;
+}
+
+.add{
+    max-width: 40px;
+    font-weight: bold;
+    font-size: 1.45em;
+    background: #378046;
+    color: #1a202c;
+    height: 40px;
+    margin-top: -7px;
+    vertical-align: middle;
+}
+
+.search{
+    width: 600px;
+    height: 36px;
+    padding: 15px 20px;
+    background: rgb(255, 255, 255);
+    color: #1a202c;
+    font-size: 1.2em;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+.alert-danger, .alert-success{
+    margin-top: 25px;
+}
