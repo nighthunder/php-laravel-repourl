@@ -51,11 +51,11 @@
                 <div class="flex justify-center mt-4 sm:items-center sm:justify-between">
                     <div class="text-center text-sm text-gray-500 sm:text-left">
                         <div class="flex items-center">
-                            <form method="POST" action="{{ route('dashboard.login.do') }}">
+                            <form method="POST" action="{{ route('dashboard.login.do') }}" style="text-align:left">
                                 {!! csrf_field() !!}
                             
                                 <div>
-                                    <label for="email">Email</label>
+                                    <label for="email" style="margin-right: 26px">Email</label>
                                     <input type="text" name="email" value="{{ old('email') }}">
                                 </div>
                             
@@ -65,12 +65,12 @@
                                 </div> 
                             
                                 <div>
-                                    <button type="submit">Login</button>
+                                    <button class="btn btn-warning" type="submit">Login</button>
                                 </div>
 
                                 @if($errors->all())
                                     @foreach($errors->all() as $error)
-                                        <div class="alert alert-danger" role="alert">
+                                        <div class="alert alert-danger text-center" role="alert">
                                             {{ $error }};
                                         </div>
                                     @endforeach

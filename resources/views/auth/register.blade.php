@@ -51,36 +51,36 @@
                 <div class="flex justify-center mt-4 sm:items-center sm:justify-between">
                     <div class="text-center text-sm text-gray-500 sm:text-left">
                         <div class="flex items-center">
-                            <form method="POST" action="{{ route('dashboard.register.do') }}">
+                            <form method="POST" action="{{ route('dashboard.register.do') }}" style="text-align:left">
                                 {!! csrf_field() !!}
                             
                                 <div>
-                                    <label for="name">Name</label>
+                                    <label for="name" style="margin-right:83px">Name</label>
                                     <input type="text" name="name" value="{{ old('name') }}">
                                 </div>
                             
                                 <div>
-                                    <label for="email">Email</label>
+                                    <label for="email" style="margin-right:85px">Email</label>
                                     <input type="text" name="email" value="{{ old('email') }}">
                                 </div>
                             
                                 <div>
-                                    <label for="password">Password</label>
+                                    <label for="password" style="margin-right:58px">Password</label>
                                     <input type="password" name="password">
                                 </div>
                             
                                 <div>
-                                    <label for="password_confirmation">Confirm Password</label>
+                                    <label for="password_confirmation" style="margin-right:>Confirm Password</label>
                                     <input type="password" name="password_confirmation">
                                 </div>
                             
                                 <div>
-                                    <button type="submit">Register</button>
+                                    <button class="btn btn-warning" type="submit">Register</button>
                                 </div>
 
                                 @if($errors->all())
                                     @foreach($errors->all() as $error)
-                                        <div class="alert alert-danger" role="alert">
+                                        <div class="alert alert-danger text-center" role="alert">
                                             {{ $error }}
                                         </div>
                                     @endforeach

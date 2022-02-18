@@ -32,11 +32,6 @@ class AuthController extends Controller
 
     public function login(Request $request){
 
-        /*$user = User::where('email', '=', $request_>email)->first();
-        if ($user === null) {
-            return redirect()->back()->withInput()->withErrors('Usuário não existe');
-        }*/
-
         if ( ! filter_var($request->email, FILTER_VALIDATE_EMAIL) ){
             return redirect()->back()->withInput()->withErrors('Digite um email válido');
         }
@@ -51,7 +46,7 @@ class AuthController extends Controller
             return redirect()->route('dashboard');
         }
 
-        return redirect()->back()->withInput()->withErrors('Os dados informados não estão corretos');
+        return redirect()->back()->withInput()->withErrors('Não existe uma conta com esses dados.');
     }
 
     public function loggout(){
@@ -101,7 +96,7 @@ class AuthController extends Controller
 
         //dd($new_user);
 
-        $ret = DB::select('Insert into Users values (?,?,?,?,?,?,?,?)', array_values($new_user));
+        $ret = DB::select('Insert into users values (?,?,?,?,?,?,?,?)', array_values($new_user));
 
         if(!$ret) {
             return redirect()->back()->withInput()->withErrors('Usuário registrado com sucesso.');
